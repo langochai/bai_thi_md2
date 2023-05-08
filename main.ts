@@ -14,7 +14,7 @@ studentlist.list.push(student4)
 export let readline = require('readline-sync')
 
 export let main = (studentList:StudentManager) =>{
-    console.log(`***`)
+    console.log(`*********************************************************************`)
     console.log(`Main menu:`)
     let option:string[] = [
         "Show info",
@@ -74,6 +74,7 @@ export let main = (studentList:StudentManager) =>{
         case 4:
             let idForDelete = +readline.question(`Enter ID:`)
             studentList.deleteStudent(idForDelete)
+            main(studentList)
             break
         default:
             console.log(`Exit.`)
