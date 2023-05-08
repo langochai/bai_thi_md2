@@ -44,7 +44,8 @@ export let main = (studentList:StudentManager) =>{
                 "C02",
                 "C03"
             ]
-            let indexForClassroomAdding = readline.keyInSelect(optionForClassroomAdding,"Please choose:")
+            let indexForClassroomAdding = readline.keyInSelect(optionForClassroomAdding,"Please choose (choosing cancel will" +
+                "automatically choose C03):")
             if(indexForClassroomAdding === 0) classroomForAdding = Classroom.C02
             else classroomForAdding = Classroom.C03
             let addressForAdding = readline.question(`Enter address:`)
@@ -61,7 +62,8 @@ export let main = (studentList:StudentManager) =>{
                 "C02",
                 "C03"
             ]
-            let indexForClassroomUpdate = readline.keyInSelect(optionForClassroomUpdate,"Please choose:")
+            let indexForClassroomUpdate = readline.keyInSelect(optionForClassroomUpdate,"Please choose (choosing cancel will" +
+                "automatically choose C03):")
             let classroomForUpdate:Classroom
             if(indexForClassroomUpdate === 0) classroomForUpdate = Classroom.C02
             else classroomForUpdate = Classroom.C03
