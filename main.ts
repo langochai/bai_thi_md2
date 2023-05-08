@@ -41,11 +41,11 @@ export let main = (studentList:StudentManager) =>{
             let nameForAdding = readline.question(`Enter student's name:`)
             console.log(`Please choose a classroom:`)
             let classroomForAdding:Classroom
-            let optionForClassroom:string[] = [
+            let optionForClassroomAdding:string[] = [
                 "C02",
                 "C03"
             ]
-            let indexForClassroomAdding = readline.keyInSelect(optionForClassroom,"Please choose:")
+            let indexForClassroomAdding = readline.keyInSelect(optionForClassroomAdding,"Please choose:")
             if(indexForClassroomAdding === 0) classroomForAdding = Classroom.C02
             else classroomForAdding = Classroom.C03
             let addressForAdding = readline.question(`Enter address:`)
@@ -58,7 +58,11 @@ export let main = (studentList:StudentManager) =>{
         case 3:
             let idForUpdate = +readline.question(`Enter ID:`)
             let nameForUpdate = readline.question(`Enter student's name:`)
-            let indexForClassroomUpdate = readline.keyInSelect(optionForClassroom,"Please choose:")
+            let optionForClassroomUpdate:string[] = [
+                "C02",
+                "C03"
+            ]
+            let indexForClassroomUpdate = readline.keyInSelect(optionForClassroomUpdate,"Please choose:")
             let classroomForUpdate:Classroom
             if(indexForClassroomUpdate === 0) classroomForUpdate = Classroom.C02
             else classroomForUpdate = Classroom.C03
