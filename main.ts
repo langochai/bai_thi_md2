@@ -10,7 +10,6 @@ studentlist.list.push(student1)
 studentlist.list.push(student2)
 studentlist.list.push(student3)
 studentlist.list.push(student4)
-studentlist.showList()
 
 export let readline = require('readline-sync')
 
